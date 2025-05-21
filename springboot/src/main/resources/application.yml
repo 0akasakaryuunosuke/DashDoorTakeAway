@@ -1,0 +1,46 @@
+﻿server:
+  port: 9090
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 123456
+    url: jdbc:mysql://localhost:3306/takeaway?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&useSSL=false&serverTimezone=GMT%2b8&allowPublicKeyRetrieval=true
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 100MB
+  redis:
+    host: localhost
+    port: 6379
+    database: 10
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.example.entity
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    map-underscore-to-camel-case: true
+
+pagehelper:
+  helper-dialect: mysql
+  reasonable: true
+  support-methods-arguments: true
+  params: count=countSql
+
+wechat:
+  app-id: wx5e876d38da525235
+  secret: 2a584103727b41fb1d3c47db009a0fdc
+alioss:
+  endpoint: oss-cn-beijing.aliyuncs.com
+  access-key-id: LTAI5tKnEhK8nQXdws3EFTd7
+  access-key-secret: aIN9vXDsusvfnU9EsXs31VT2RyedjY
+  bucket-name: oss-jlx
+
+
+dashscope:
+  api-key: ${DASHSCOPE_API_KEY:sk-d80397db309349e6becd02b5975cd649}
+  app-id: ${MY_APP_ID:a69376d7952b42359a589754e2bca7d3}
+
+ip: localhost
