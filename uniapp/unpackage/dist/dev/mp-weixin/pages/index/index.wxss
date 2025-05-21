@@ -1,0 +1,13 @@
+
+.category-item {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	grid-gap: 10rpx;
+}
+.uni-searchbar {
+	padding: 10rpx !important;
+}
+
